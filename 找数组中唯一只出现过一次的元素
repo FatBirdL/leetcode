@@ -1,0 +1,13 @@
+###Q:一个非空整数数组，除了某个元素只出现一此外，其余每个元素出现两次，找出那个只出现了一次的元素
+###例如：输入[2,1,2] 返回1
+###
+def singlenumber(*args):
+  numlist = []
+  for each in args:
+    if each not in numlist:
+      numlist.append(each)
+    else:
+      numlist.remove(each)
+  return numlist.pop()
+###核心思想就是把原来列表里的数据弄到numlist里面去，然后由于其他元素都是重复两次的，所以第二次出现的时候会被从list里删除掉，最后numlist里只剩下那个
+唯一出现过一次的元素，题目要求输出的是列表中的元素，所以return的对象是numlist.pop()弹出唯一的元素，也可以用numlist[0]来实现访问输出元素
