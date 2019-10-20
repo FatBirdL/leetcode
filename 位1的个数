@@ -12,3 +12,6 @@ def counter(n):
   import collections
   count = collections.Counter(bin(n)).get('1')
   return count if count else 0
+###补充一个对collections模块讲解清晰的博客地址：https://www.cnblogs.com/luminousjj/p/9342161.html
+###主要功能：counter计数、defaultdict在设置时加默认值、deque可以头尾双向操作、namedtuple可以为每个成员分配了名字、orderdict
+###是字典的子类，记得其内容被添加的顺序
