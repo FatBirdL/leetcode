@@ -1,0 +1,36 @@
+###题目
+###给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
+
+说明：本题中，我们将空字符串定义为有效的回文串。
+
+示例 1:
+
+输入: "A man, a plan, a canal: Panama"
+输出: true
+示例 2:
+
+输入: "race a car"
+输出: false
+###思路：用双指针，先判断字符串是否为空字符串，此时直接返回True，当字符串非空的时候，双指针从一头一尾开始遍历，首先判断该位置上的元素是否由数字或者字母组成
+###然后当是的时候，判断对应位置的元素是否相等
+###代码：
+def ispalindrome(s):
+  l = 0
+  r = len(s) - 1
+  if 
+  while l < r:
+    if s[l].isalnum and s[r].isalnum:
+      if s[l].upper() == s[r].upper():
+        l += 1
+        r -= 1
+      else:
+        return False
+    else:
+      if not s[l].isalnum():
+        l += 1
+      if not s[r].isalnum():
+        r -= 1
+  return True
+###知识点：a.isalnum()  判断a是否由数字或者字母组成
+###str.upper()   将字符串中的小写字母转成大写字母
+###双指针的用法
